@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "python",
+  "extra-files": [
+    {
+      "path": "uv.lock",
+      "type": "toml",
+      "jsonpath": "$.package[?(@.name.value=='anti-fraud-real-time-transactions')].version"
+    }
+  ]
+}
