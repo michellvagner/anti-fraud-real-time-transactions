@@ -17,8 +17,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Instalar uv
+        uses: astral-sh/setup-uv@v9
+
       - name: Instalar dependências
-        run: pip install pytest
+        run: uv sync
 
       - name: Rodar testes
-        run: python -m pytest
+        run: uv run python -m pytest
