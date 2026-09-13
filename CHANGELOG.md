@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/michellvagner/anti-fraud-real-time-transactions/compare/v1.1.0...v1.2.0) (2026-09-13)
+
+
+### Features
+
+* test automatic release ([6f2d542](https://github.com/michellvagner/anti-fraud-real-time-transactions/commit/6f2d542a65a5eeb42346315f95dd9c32361496f1))
+* test automatic release ([5ba0f78](https://github.com/michellvagner/anti-fraud-real-time-transactions/commit/5ba0f78b6521865bcfddbccd27276f1a37f755a8))
+
 ## [1.1.0](https://github.com/michellvagner/anti-fraud-real-time-transactions/compare/v1.0.3...v1.1.0) (2026-09-13)
 
 
