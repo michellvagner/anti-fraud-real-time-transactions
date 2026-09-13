@@ -1,2 +1,9 @@
-def test_soma():
-    assert 1 + 1 == 2
+from src.gerador_transacoes import generate_location
+
+
+def test_generate_location():
+    location = generate_location()
+
+    assert location["country"] is not None 
+    assert location["country_cd"] is not None 
+    assert location["currency"] is not None
