@@ -23,5 +23,8 @@ jobs:
       - name: Instalar dependências
         run: uv sync
 
+      - name: Rodar lint
+        run: uv run ruff check .
+
       - name: Rodar testes
         run: uv run python -m pytest

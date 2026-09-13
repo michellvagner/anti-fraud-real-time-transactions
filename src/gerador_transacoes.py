@@ -1,13 +1,15 @@
 # %%
-import random
-import math
-import time
-from datetime import datetime
-from faker import Faker
-import requests
-import pycountry
 import gzip
 import json
+import math
+import random
+import time
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+import pycountry
+import requests
+from faker import Faker
 
 # %%
 fake = Faker()
@@ -105,7 +107,7 @@ def criar_transacao():
             "BANCO_D"
         ]),
         "card_number": random.choice(card_number),
-        "trn_dt": datetime.now().isoformat() ,
+        "trn_dt": datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat(),
         "transaction_type": "M" if random.random() < 0.92 else random.choice(["O", "P", "A"]),
         "amount": amount,
         "card_limit_total": limit,
