@@ -26,7 +26,6 @@ package = false
 dev = [
     "ipykernel>=7.3.0",
     "pytest>=9.1.1",
-    "python-semantic-release>=10.6.2",
     "ruff>=0.16.7",
 ]
 
