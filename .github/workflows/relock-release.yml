@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "release-please--branches--main"
+  workflow_dispatch:
 
 jobs:
   relock:
