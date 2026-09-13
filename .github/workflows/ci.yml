@@ -52,13 +52,15 @@ jobs:
             username: ${{ github.actor }}
             password: ${{ secrets.GITHUB_TOKEN }}
 
-        - name: Push da imagem Docker
+        - name: Build da imagem Docker
           run: |
-            docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest
-            docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }}
-            docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.ref_name }}
+            docker build \
+              -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest \
+              -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }} \
+              -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.ref_name }} .
 
         - name: Push da imagem Docker
           run: |
             docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest
             docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }}
+            docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.ref_name }}
