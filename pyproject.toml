@@ -26,5 +26,12 @@ package = false
 dev = [
     "ipykernel>=7.3.0",
     "pytest>=9.1.1",
+    "python-semantic-release>=10.6.2",
     "ruff>=0.16.7",
 ]
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+branch = "main"
+commit_message = "chore(release): {version}"
+tag_format = "v{version}"
