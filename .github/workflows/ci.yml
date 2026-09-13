@@ -54,14 +54,12 @@ jobs:
           run: |
             docker build \
               -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest \
-              -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }} \
-              -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.ref_name }} .
+              -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }} .
 
         - name: Push da imagem Docker
           run: |
             docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest
             docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }}
-            docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.ref_name }}
 
   release:
     needs: test
