@@ -31,3 +31,13 @@ jobs:
 
       - name: Rodar testes
         run: uv run python -m pytest
+
+  docker:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Baixar código
+          uses: actions/checkout@v4
+
+        - name: Build da imagem Docker
+          run: docker build -t anti-fraud-real-time-transactions .
