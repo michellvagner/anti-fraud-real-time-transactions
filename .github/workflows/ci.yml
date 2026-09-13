@@ -23,6 +23,9 @@ jobs:
       - name: Instalar dependências
         run: uv sync
 
+      - name: Verificar formatação
+        run: uv run ruff format --check .
+
       - name: Rodar lint
         run: uv run ruff check .
 
