@@ -61,29 +61,13 @@ jobs:
             docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest
             docker push ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }}
 
-  release:
-    needs: test
+  release-please:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar código
-        uses: actions/checkout@v4
+      - name: Release Please
+        uses: googleapis/release-please-action@v4
         with:
-          fetch-depth: 0
-
-      - name: Configurar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Instalar uv
-        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
-
-      - name: Instalar dependências
-        run: uv sync
-
-      - name: Criar release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv run semantic-release version
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: python
