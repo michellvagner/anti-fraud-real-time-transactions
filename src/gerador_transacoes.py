@@ -6,7 +6,6 @@ import random
 import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
-import os
 
 import pycountry
 import requests
