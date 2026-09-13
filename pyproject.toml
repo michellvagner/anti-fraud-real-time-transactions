@@ -1,0 +1,24 @@
+[project]
+name = "anti-fraud-real-time-transactions"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Vagner Michell", email = "vagner.michell@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "faker>=40.37.0",
+    "fastapi>=0.141.1",
+    "ipykernel>=7.3.0",
+    "pycountry>=26.2.16",
+    "requests>=2.34.2",
+    "uvicorn[standard]>=0.52.4",
+]
+
+[project.scripts]
+anti-fraud-real-time-transactions = "anti_fraud_real_time_transactions:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
