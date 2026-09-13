@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+     tags:
+      - "v*"
   pull_request:
 
 permissions:
@@ -51,7 +53,7 @@ jobs:
             password: ${{ secrets.GITHUB_TOKEN }}
 
         - name: Build da imagem Docker
-          run: docker build -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }} .
+          run: docker build -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:latest -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.sha }} -t ghcr.io/michellvagner/anti-fraud-real-time-transactions:${{ github.ref_name }} .
 
         - name: Push da imagem Docker
           run: |
