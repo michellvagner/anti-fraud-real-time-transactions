@@ -42,6 +42,7 @@ jobs:
         run: uv run python -m pytest
 
   docker:
+      if: github.head_ref != 'release-please--branches--main' && github.ref != 'refs/heads/release-please--branches--main'
       runs-on: ubuntu-latest
 
       steps:
