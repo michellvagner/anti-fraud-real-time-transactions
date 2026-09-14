@@ -206,4 +206,4 @@ https://github.com/dr5hn/countries-states-cities-database/releases/latest/downlo
 
 O gerador foi desenvolvido como uma fonte de dados para uma arquitetura maior de prevenção a fraudes.
 
-A evolução natural do projeto é utilizar as transações geradas para alimentar componentes de processamento e detecção de fraude, incluindo execução em ambiente cloud.
+A evolução natural do projeto é utilizar as transações geradas para alimentar componentes de processamento e detecção de fraude, incluindo execução em ambiente cloud
