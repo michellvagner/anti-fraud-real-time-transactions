@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/michellvagner/anti-fraud-real-time-transactions/compare/v1.2.2...v1.3.0) (2026-09-14)
+
+
+### Features
+
+* add transaction validation ([5be8e07](https://github.com/michellvagner/anti-fraud-real-time-transactions/commit/5be8e07555af6d922405056c76d0ab21c51bc20c))
+* add transaction validation ([bb0fc66](https://github.com/michellvagner/anti-fraud-real-time-transactions/commit/bb0fc666d6fdf486ce0d84713db15446b9bdab17))
+
 ## [1.2.2](https://github.com/michellvagner/anti-fraud-real-time-transactions/compare/v1.2.1...v1.2.2) (2026-09-14)
 
 
